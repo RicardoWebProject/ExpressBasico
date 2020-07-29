@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hoja de Trabajo 2A</title>
+    <!--Este script siempre va antes de las referencias de hojas CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand"> <strong>GlaDOS</strong> <span class="badge badge-info">2.1</span> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Página HOME<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Estudiantes.html">Estudiantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Administradores.html">Administradores</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="btn btn-info dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Información
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Info.html">General</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://www.facebook.com/ricardo.fuentes.73307" target="_blank">Facebook
+                <span class="badge badge-primary">f</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <li><i class="fab fa-angellist"></i></li>
+      </div>
+    </nav>
+
+    <h6><b>¡Bienvenido o Bienvenida seas al listado de estudiantes!</b> <br> </h6>
+    <p class="text-justify">¿Qué es lo que necesitas saber acerca de esta página?
+      <br> <br>
+      A continuación le mostraremos la información académica de los estudiantes que actualmente
+      están inscritos en la institución. Conjunto al nombre y carnet de cada estudiante, se encuentran
+      las notas de los cursos correspondientes.
+      <br> <br>
+      Si usted es estudiante de la institución y su casilla se encuentra en color
+      <strong style="color: red">rojo</strong>, y tiene dudas respecto a su calificación
+      ,por favor pase a <em>SECRETARÍA.</em>
+
+    </p>
+    <!--La tabla que muetra el contenido de los estudiantes-->
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Estudiantes Actualmente Anotados</th>
+          <th scope="col">Ingreso de Información</th>
+        </tr>
+      </thead>
+      <tbody id="CuerpoTabla">
+        <tr>
+          <td>
+            <!--Inicio de la tabla interna de los estudiantes-->
+            <table class="table table-dark" id="Tabla1">
+              <thead>
+                <tr>
+                  <th scope="col">Número de Carnet</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Curso</th>
+                  <th scope="col">Nota</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-primary">
+                  <th scope="row">0903-16-1996</th>
+                  <td>Ricardo</td>
+                  <td>Fuentes</td>
+                  <td>Programación</td>
+                  <td>75</td>
+                </tr>
+                <tr class="bg-primary">
+                  <th scope="row">0903-17-5566</th>
+                  <td>Jacobo</td>
+                  <td>Escobar</td>
+                  <td>Desarrollo Web</td>
+                  <td>85</td>
+                </tr>
+                <tr class="bg-primary">
+                  <th scope="row">0805-16-4411</th>
+                  <td>Lucía</td>
+                  <td>Miranda</td>
+                  <td>Cálculo I</td>
+                  <td>72</td>
+                </tr>
+                <tr class="bg-danger">
+                  <th scope="row">1415-11-8854</th>
+                  <td>Larry</td>
+                  <td>Sandoval</td>
+                  <td>Base de Datos</td>
+                  <td>53</td>
+                </tr>
+                <tr class="bg-primary">
+                  <th scope="row">8015-16-8816</th>
+                  <td>Paola</td>
+                  <td>Orozco</td>
+                  <td>Análisis de Sistemas</td>
+                  <td>76</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <!--Fin de la tabla interna de estudiantes-->
+
+          <td>
+            <!--Inicio de la tabla interna de formulario-->
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Nombre</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Primer Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Apellido</label>
+                  <input type="password" class="form-control" id="inputPassword4" placeholder="Primer Apellido">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Número de Carnet</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Del tipo 0000-00-00000">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Nombre del Curso</label>
+                <input type="text" class="form-control" id="inputAddress2">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Nota de Curso</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+              </div>
+            </form>
+            <button class="btn btn-warning" id="Subir" onclick="Agregar()">Subir</button>
+          </td>
+          <!--Fin de la tabla interna del formulario-->
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="color: dodgerblue "> <em>Si necesita contactarse con algún estudiante, por favor
+        <u>llame al 4245-3058</u> y brinde el número de carnet
+        de quien requiere información académica extendida.</em>
+    </p>
+
+    <footer>
+      <script type="text/javascript" src="../js/jquery.js"></script>
+      <!--Agregado de un archivo de jQuery-->
+      <script src="https://kit.fontawesome.com/64ec36acb7.js"></script>
+      <!--Este último es un enlace para la descarga de los íconos a usar-->
+      <script type="text/javascript" src="../js/bootstrap.js"></script>
+      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../js/script.js"></script>
+      <!--Hoja script de ejemplo en clase-->
+    </footer>
+
+  </body>
+
+</html>
