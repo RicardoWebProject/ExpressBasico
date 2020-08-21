@@ -1,0 +1,80 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title #{titulo}
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/bootstrap-grid.css')
+    link(rel='stylesheet' href='/css/bootstrap-reboot.css')
+    // Hoja script de ejemplo en clase
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand
+        strong GlaDOS
+        span.badge.badge-info 2.1
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href='/')
+                    | P&aacute;gina HOME
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='/estudiantes') Estudiantes
+            li.nav-item
+                a.nav-link(href='/administradores') Administradores
+            li.nav-item.dropdown
+                a#navbarDropdown.btn.btn-info.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Informaci&oacute;n
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='/info') General
+                    .dropdown-divider
+                    a.dropdown-item(href='https://www.facebook.com/ricardo.fuentes.73307' target='_blank')
+                        | Facebook
+                        span.badge.badge-primary f
+        li
+            i.fab.fa-angellist
+// Aquí termina la Barra de Navegación
+table.table
+    thead.thead-dark
+        tr
+            th(scope='col') &iquest;C&oacute;mo funciona?
+            th(scope='col')
+                button#botonSesion.btn.btn-outline-success(type='button') Iniciar Sesi&oacute;n
+    tbody
+        tr
+            td
+                h6#Titulo1
+                    | Bienvenido al sistema de inicio de sesi&oacute;n.
+                    br
+                    br
+                    |               Para iniciar, d&eacute; click al bot&oacute;n &quot;Iniciar Sesi&oacute;n&quot;.
+                    br
+                    |  Se encuentra resaltado de color verde.
+                    br
+                    br
+                    |               Una vez hecho esto, se le mostrar&aacute; el formulario a llenar.
+                h6#Titulo2 Ahora, usted solamente debe ingresar sus datos y presionar &quot;Enviar&quot;.
+            td
+                form#Formulario
+                    .form-group
+                        label(for='exampleInputEmail1') Correo Electr&oacute;nico
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Ingrese Correo')
+                        small#emailHelp.form-text.text-muted Nunca compartiremos su correo con nadie.
+                    .form-group
+                        label(for='exampleInputPassword1') Contrase&ntilde;a
+                        input#exampleInputPassword1.form-control(type='password' placeholder='Ingrese Contraseña')
+                    .form-group.form-check
+                        input#exampleCheck1.form-check-input(type='checkbox')
+                        label.form-check-label(for='exampleCheck1') Mantener sesi&oacute;n siempre activa
+                    button#Enviar.btn.btn-primary(type='submit') Enviar
+footer
+    script(type='text/javascript' src='../js/jquery.js')
+    // Agregado de un archivo de jQuery
+    // Este script siempre va antes de las referencias de hojas CSS
+    script(type='text/javascript' src='/js/bootstrap.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+    script(type='text/javascript' src='/js/script.js')
+    script(src='https://kit.fontawesome.com/64ec36acb7.js')
+    // Este último es un enlace para la descarga de los íconos a usar

@@ -1,0 +1,91 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Hoja de Trabajo 2A
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/bootstrap-grid.css')
+    link(rel='stylesheet' href='/css/bootstrap-reboot.css')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand
+        strong GlaDOS
+        span.badge.badge-info 2.1
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href='/')
+                    | P&aacute;gina HOME
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='/estudiantes') Estudiantes
+            li.nav-item
+                a.nav-link(href='/administradores') Administradores
+            li.nav-item.dropdown
+                a#navbarDropdown.btn.btn-info.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Informaci&oacute;n
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='/info') General
+                    .dropdown-divider
+                    a.dropdown-item(href='https://www.facebook.com/ricardo.fuentes.73307' target='_blank')
+                        | Facebook
+                        span.badge.badge-primary f
+        li
+            i.fab.fa-angellist
+.list-group
+    a.list-group-item.list-group-item-action.active(href='https://www.facebook.com/ricardo.fuentes.73307?ref=bookmarks' target='_blank')
+        .d-flex.w-100.justify-content-between
+            h5.mb-2 Estudiante
+            small Luis Ricardo Fuentes Orozco
+            img.img-fluid(src='/foto-ricardo.jpg' height='70px' width='90px' alt='Ricardo Fuentes')
+        p.mb-1
+            | Con n&uacute;mero de carnet 0903-16-1996, Ricardo Fuentes ha emprendido viaje hacia el fascinante mundo
+            | del desarrollo
+            | web.
+        small Encuentra m&aacute;s acerca de &eacute;l pulsando en este panel.
+    a.list-group-item.list-group-item-action(href='https://umg.edu.gt/' target='_blank')
+        .d-flex.w-100.justify-content-between
+            h5.mb-1 Universidad
+            small.text-muted Universidad Mariano G&aacute;lvez de Guatemala
+        p.mb-1(style='text-align: justify')
+            | Es una universidad privada de Guatemala. Su nombre hace referencia
+            | al pr&oacute;cer y preclaro
+            | jurisconsulto Doctor Jos&eacute; Mariano G&aacute;lvez, fundador de la Academia de Estudios y reformador de la educaci&oacute;n
+            | Guatemalteca.
+            br
+            |  Esta universidad atiende, esencialmente, a la formaci&oacute;n &eacute;tica, cient&iacute;fica, profesional y t&eacute;cnica de los
+            |           estudiantes,
+            |           mediante el ejercicio integrado de la docencia, investigaci&oacute;n y el servicio a la comunidad, al fomento de la
+            |           investigaci&oacute;n
+            |           como fuente de conocimiento y de progreso y al estudio de los problemas con el objetivo de contribuir a su
+            |           soluci&oacute;n.
+        small.text-muted &quot;Y conocer&eacute;is la verdad la verdad os har&aacute; libres&quot; Juan 8:32
+    a.list-group-item.list-group-item-action(href='http://www.guate360.com/galeria/img-fachada-de-iglesia-de-san-pedro-sacatepequez-4748.htm' target='_blank')
+        .d-flex.w-100.justify-content-between
+            h5.mb-1 San Pedro Sacatep&eacute;quez
+            small.text-muted Bello Municipio
+        p.mb-1(style='text-align: justify')
+            | San Pedro Sacatep&eacute;quez es uno de los 29 municipios de San Marcos,
+            | situado en la parte oriental de la
+            | cabecera de este departamento, ocupando una extensa superficie que por su propia naturaleza y verdor se le ha
+            | dado el nombre de 
+            strong &quot;Valle de la Esmeralda&quot;
+            | .
+            br
+            |  Est&aacute; rodeada de ramales de la Sierra Madre o parte de los montes Cuchumatanes cuyos remates toman los
+            |           nombres
+            |           de las monta&ntilde;as de Caben, Shinij, Ixhual, La Cuesta del Burro, la Hierba Buena, Piedra de Laja, Los Tizotes y
+            |           Sacuch&uacute;m.
+        small.text-muted Dale click a este panel para poder ver una galer&iacute;a en l&iacute;nea.
+footer
+    script(type='text/javascript' src='/js/jquery.js')
+    // Agregado de un archivo de jQuery
+    // Este script siempre va antes de las referencias de hojas CSS
+    script(src='https://kit.fontawesome.com/64ec36acb7.js')
+    // Este último es un enlace para la descarga de los íconos a usar
+    script(type='text/javascript' src='/js/bootstrap.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+    script(type='text/javascript' src='/js/script.js')
+    // Hoja script de ejemplo en clase

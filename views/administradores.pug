@@ -1,0 +1,105 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Hoja de Trabajo 2A |Administradores
+    // Este script siempre va antes de las referencias de hojas CSS
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/bootstrap-grid.css')
+    link(rel='stylesheet' href='/css/bootstrap-reboot.css')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand
+        strong GlaDOS
+        span.badge.badge-info 2.1
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href='/')
+                    | P&aacute;gina HOME
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='/estudiantes') Estudiantes
+            li.nav-item
+                a.nav-link(href='/administradores') Administradores
+            li.nav-item.dropdown
+                a#navbarDropdown.btn.btn-info.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Informaci&oacute;n
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='/info') General
+                    .dropdown-divider
+                    a.dropdown-item(href='https://www.facebook.com/ricardo.fuentes.73307' target='_blank')
+                        | Facebook
+                        span.badge.badge-primary f
+        li
+            i.fab.fa-angellist
+h6
+    b &iexcl;Bienvenido o Bienvenida seas al listado de administradores!
+    br
+p.text-justify
+    | &iquest;Qu&eacute; es lo que necesitas saber acerca de esta p&aacute;gina?
+    br
+    br
+    |       En esta p&aacute;gina le mostraremos la informaci&oacute;n principal instucional de los Administradores
+    |       de cada carrera del centro educativo. En otras palabras, puedes conocerlos
+    |       como los 
+    em
+        strong Coordinadores de Carrera.
+    br
+    br
+    |       Cada casilla contendr&aacute; el color asociado a la carrera, por lo que
+    |       el color es &uacute;nicamente distintivo para familiarizarse con cada carrera de la instituci&oacute;n.
+// La tabla que muetra el contenido de los estudiantes
+table.table.table-dark
+    thead.thead-light
+        tr
+            th(scope='col') C&oacute;digo de Identificaci&oacute;n
+            th(scope='col') Nombre
+            th(scope='col') Apellido
+            th(scope='col') Carrera
+    tbody
+        tr.bg-secondary
+            th(scope='row') 15585-96
+            td &Aacute;lvaro
+            td Casta&ntilde;eda
+            td Ingenier&iacute;a en Sistemas
+        tr.bg-danger
+            th(scope='row') 13445-87
+            td Jacobo
+            td Guzm&aacute;n
+            td Criminolog&iacute;a
+        tr.bg-info
+            th(scope='row') 12004-55
+            td Carmen
+            td Gonz&aacute;lez
+            td Psicolog&iacute;a
+        tr.bg-primary
+            th(scope='row') 14552-56
+            td Roberto
+            td Gir&oacute;n
+            td Adminstraci&oacute;n de Empresas
+        tr.bg-warning
+            th(scope='row') 17884-23
+            td Estefani
+            td &Aacute;lfaro
+            td Pedagog&iacute;a
+p(style='color: dodgerblue ')
+    em
+        | Si necesita contactarse con alg&uacute;n administrador, por favor
+        u llame al 4245-3058
+        |  y brinde el n&uacute;mero de carnet
+        |         de quien requiere informaci&oacute;n acad&eacute;mica extendida.
+p(style='color: crimson')
+    strong &iexcl;EVOLUCIONAREMOS!
+p
+footer
+    script(type='text/javascript' src='/js/jquery.js')
+    // Agregado de un archivo de jQuery
+    script(src='https://kit.fontawesome.com/64ec36acb7.js')
+    // Este último es un enlace para la descarga de los íconos a usar
+    script(type='text/javascript' src='/js/bootstrap.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+    script(type='text/javascript' src='/js/script.js')
+    // Hoja script de ejemplo en clase

@@ -1,0 +1,141 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title #{titulo}
+    // Este script siempre va antes de las referencias de hojas CSS
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/bootstrap-grid.css')
+    link(rel='stylesheet' href='/css/bootstrap-reboot.css')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand
+        strong GlaDOS
+        span.badge.badge-info 2.1
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href='/')
+                    | P&aacute;gina HOME
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='/estudiantes') Estudiantes
+            li.nav-item
+                a.nav-link(href='/administradores') Administradores
+            li.nav-item.dropdown
+                a#navbarDropdown.btn.btn-info.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Informaci&oacute;n
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='/info') General
+                    .dropdown-divider
+                    a.dropdown-item(href='https://www.facebook.com/ricardo.fuentes.73307' target='_blank')
+                        | Facebook
+                        span.badge.badge-primary f
+        li
+            i.fab.fa-angellist
+h6
+    b &iexcl;Bienvenido o Bienvenida seas al listado de estudiantes!
+    br
+p.text-justify
+    | &iquest;Qu&eacute; es lo que necesitas saber acerca de esta p&aacute;gina?
+    br
+    br
+    |       A continuaci&oacute;n le mostraremos la informaci&oacute;n acad&eacute;mica de los estudiantes que actualmente
+    |       est&aacute;n inscritos en la instituci&oacute;n. Conjunto al nombre y carnet de cada estudiante, se encuentran
+    |       las notas de los cursos correspondientes.
+    br
+    br
+    |       Si usted es estudiante de la instituci&oacute;n y su casilla se encuentra en color
+    strong(style='color: red') rojo
+    | , y tiene dudas respecto a su calificaci&oacute;n
+    |       ,por favor pase a 
+    em SECRETAR&Iacute;A.
+// La tabla que muetra el contenido de los estudiantes
+table.table
+    thead.thead-dark
+        tr
+            th(scope='col') Estudiantes Actualmente Anotados
+            th(scope='col') Ingreso de Informaci&oacute;n
+    tbody#CuerpoTabla
+        tr
+            td
+                // Inicio de la tabla interna de los estudiantes
+                table#Tabla1.table.table-dark
+                    thead
+                        tr
+                            th(scope='col') N&uacute;mero de Carnet
+                            th(scope='col') Nombre
+                            th(scope='col') Apellido
+                            th(scope='col') Curso
+                            th(scope='col') Nota
+                    tbody
+                        tr.bg-primary
+                            th(scope='row') 0903-16-1996
+                            td Ricardo
+                            td Fuentes
+                            td Programaci&oacute;n
+                            td 75
+                        tr.bg-primary
+                            th(scope='row') 0903-17-5566
+                            td Jacobo
+                            td Escobar
+                            td Desarrollo Web
+                            td 85
+                        tr.bg-primary
+                            th(scope='row') 0805-16-4411
+                            td Luc&iacute;a
+                            td Miranda
+                            td C&aacute;lculo I
+                            td 72
+                        tr.bg-danger
+                            th(scope='row') 1415-11-8854
+                            td Larry
+                            td Sandoval
+                            td Base de Datos
+                            td 53
+                        tr.bg-primary
+                            th(scope='row') 8015-16-8816
+                            td Paola
+                            td Orozco
+                            td An&aacute;lisis de Sistemas
+                            td 76
+            // Fin de la tabla interna de estudiantes
+            td
+                // Inicio de la tabla interna de formulario
+                form
+                    .form-row
+                        .form-group.col-md-6
+                            label(for='inputEmail4') Nombre
+                            input#inputEmail4.form-control(type='email' placeholder='Primer Nombre')
+                        .form-group.col-md-6
+                            label(for='inputPassword4') Apellido
+                            input#inputPassword4.form-control(type='password' placeholder='Primer Apellido')
+                    .form-group
+                        label(for='inputAddress') N&uacute;mero de Carnet
+                        input#inputAddress.form-control(type='text' placeholder='Del tipo 0000-00-00000')
+                    .form-group
+                        label(for='inputAddress2') Nombre del Curso
+                        input#inputAddress2.form-control(type='text')
+                    .form-row
+                        .form-group.col-md-6
+                            label(for='inputCity') Nota de Curso
+                            input#inputCity.form-control(type='text')
+                button#Subir.btn.btn-warning(onclick='Agregar()') Subir
+            // Fin de la tabla interna del formulario
+p(style='color: dodgerblue ')
+    em
+        | Si necesita contactarse con alg&uacute;n estudiante, por favor
+        u llame al 4245-3058
+        |  y brinde el n&uacute;mero de carnet
+        |         de quien requiere informaci&oacute;n acad&eacute;mica extendida.
+footer
+    script(type='text/javascript' src='../js/jquery.js')
+    // Agregado de un archivo de jQuery
+    script(src='https://kit.fontawesome.com/64ec36acb7.js')
+    // Este último es un enlace para la descarga de los íconos a usar
+    script(type='text/javascript' src='/js/bootstrap.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+    script(type='text/javascript' src='/js/script.js')
+    // Hoja script de ejemplo en clase
